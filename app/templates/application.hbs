@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="header-home-user">
+          <h2>  <i class="fa fa-newspaper-o" style="font-size:30px"></i> Book House</h2>
+       </div>
+
+   <div class="navbar-home-user">
+             
+     <div class="section" >
+    {{#if session.currentUser}}
+      <span  {{action 'logout'}} style="cursor: pointer;">Logout  </span>&nbsp;&nbsp;<b><span class="titl">Welcome {{session.currentUser.username}} !!</span></b>
+    {{else}}
+      {{#link-to 'users'}}Login{{/link-to}}
+    {{/if}}
+    
+    {{#link-to 'users'}}Users{{/link-to}}
+  </div>
+   </div>
+    {{outlet}}
+

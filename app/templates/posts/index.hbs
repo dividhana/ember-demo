@@ -1,0 +1,56 @@
+{{!--<div class="header-home-user">
+              <h1 class="home-user-h1">Welcome to E-Quiz</h1>
+              <p>
+                     <b>If you want to shine like a sun, first burn like a sun.<br>--}}
+
+                           {{!---A. P. J. Abdul Kalam
+                     </b>.
+              </p>
+       </div>--}}
+
+              {{!--<div class="register-form">
+                     <h1>Register</h1>
+                     <p>Please fill in this form to create an account.</p>
+                     <hr>
+                     <div class="row">
+                           <div class="main-row">
+
+
+
+                                  <b>First Name</b>
+                                  <Input @value={{this.newfirstname}} placeholder="FirstName"/>
+    
+                                <b>Last Name</b> <span id=lname></span>
+                              <Input @value={{this.newlastname}}  placeholder="Last Name"/>
+                                      
+                                         
+                                  
+                                   <b>Contact Number</b>
+                                  <Input @value={{this.newphone}} placeholder="Contact Number"/> 
+                                         <b>E-mail</b> <Input @value={{this.newemail}} placeholder="Email"/>
+                                           <b>Country</b> <Input @value={{this.newcountry}}  placeholder="Country"/> 
+                                           <b>Company name</b><Input @value={{this.newcompany}} placeholder="Company name" />
+                                         <button  class="registerbtn" {{action 'addPost'}}>Create</button>
+                           </div>
+                           
+                           <hr>
+
+                  
+                     </div>
+
+                    
+              </div>
+    --}}
+    <h3 class="title"> Books on Stock</h3>
+<div class="flex-container">
+  {{#each @model as |post|}}
+    <div>
+      <PostView @post={{post}} @showBody={{false}} />
+      <LinkTo class="view" @route="posts.post" @model={{post.id}}>
+VIEW DETAILS
+      </LinkTo>
+    </div>
+  {{/each}}
+</div>
+
+{{outlet}}

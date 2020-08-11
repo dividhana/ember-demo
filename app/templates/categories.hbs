@@ -1,0 +1,13 @@
+  <h2 class="title">Categories</h2>
+  <div class="container">
+ {{#each @model as |category|}}
+  <div class="card">
+      <h1>  {{category.categoryname}}</h1> <br>
+       
+      <LinkTo @route="posts.index" >
+View some books in this category
+      </LinkTo>  
+   
+    </div>
+  {{/each}}
+  </div>

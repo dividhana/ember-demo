@@ -1,0 +1,42 @@
+<h4>{{@post.bookname}}
+  <br>
+</h4>
+<h4>Rs.{{@post.bookprice}}</h4>
+<br>
+
+{{#if @showBody}}
+<table>
+<tr>
+<td><b> Book Name</b></td>
+<td>{{@post.bookname}}<br></td>
+</tr>
+<tr>
+  <td><b> Author Name </b></td>
+  <td>{{@post.authorname}}<br></td>
+</tr>
+<tr>
+  <td><b>  Author Email </b></td>
+  <td>{{@post.authoremail}}<br></td>
+</tr>
+<tr>
+  <td><b> Author Phone </b></td>
+  <td>{{@post.authorphone}}<br></td>
+</tr>
+<tr>
+  <td><b>Book Pubished At </b></td>
+  <td>{{@post.formattedPublishedAt}}<br></td>
+</tr>
+<tr>
+  <td><b> Book Price</b></td>   
+  <td>{{@post.bookprice}}<br></td>
+</tr>
+<tr>
+  <td><b> Book Description</b></td>
+  <td>{{@post.bookdescription}}</td>
+</tr>
+<br></table>
+  <button {{on "click" (fn this.removePost @post)}}>
+    Remove Book
+  </button>
+
+{{/if}}
